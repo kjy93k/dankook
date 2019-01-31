@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+@import url(reset.css);
+body{font: 12px/1.3 malgungothic,"맑은고딕",Arial,sans-serif; background-color: #f5f3f3;}
+#header,#container,#footer{width: 1100px;margin: 0 auto;position: relative;}
+#header{padding-top: 65px; padding-bottom: 30px;}
+#header>.skip-menu a{display: block;width: 100%;padding: 8px 0; text-align: center; background-color: #000; color: #e1ebfd; position: absolute;top: -99999px;z-index: 1;}
+#header>.skip-menu a:focus{top: 0;}
+.util-menu{padding: 7px 11px;position: absolute;top: 0;right: 0; background-color: #000;border-radius:0 0 13px 13px;}
+.util-menu>ul>li{float: left; margin-left: 7px;color: #e1ebfd;}
+.util-menu>ul>li:first-child{margin: 0;}
+.util-menu>ul>li:before{content:""; display: inline-block; margin-right: 6px; width: 1px;height: 13px;background-color: #e1ebfd; position: relative;top: 2px; }
+.util-menu>ul>li:first-child:before{background: none; margin: 0;}
+#gnb-wrap {position: absolute;top: 67px; right: 120px;}
+#gnb-wrap>h2+ul>li{float: left; margin-left: 30px;}
+#gnb-wrap>h2+ul>li:first-child{margin-left: 0;}
+.nav-open{background-color: #fff;position: relative;padding: 30px;width: 950px; height: 600px; margin: 0 auto;margin-top: 20px;}
+.nav-open > h2{position: absolute;top: -57px;right: -75px;}
+.nav-open > h2+ul>li{float: left;margin-right: 50px;}
+.nav-open > h2+ul>li>ul{float: right; margin-left: 30px;}
+.nav-open > h2+ul ul{height: 300px;}
+.nav-open > h2+ul>li>ul>li{margin-bottom: 20px;}
+.nav-open button{position: absolute;bottom: 0;right: 0;}
+

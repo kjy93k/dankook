@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>title</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		body{font-size: 14px;}
+		img{max-width: 100%;}
+		.mb50{margin-bottom: 50px;}
+		.mb10{margin-bottom: 10px;}
+		.navbar{background: rgba(245,243,243,.7);}
+		.navbar-dark .navbar-nav .nav-link,.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link{color: rgba(0,0,0,.8);}
+		.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {color: rgba(0,0,0,.5);}
+		nav .navbar-brand img{width: 190px;}
+		nav .dropdown-toggle::after{border: none;}
+		nav .dropdown-menu{font-size: 0.8rem;}
+		
+		.visual{padding-top: 99px;}
+
+		.c1{}
+		.c1 h2{font-size: 30px;	color: #36496d;}
+		.c1-2 .txt{background: #ebebeb;height: 264px;padding-top: 40px;	padding-bottom:40px;}
+		.c1 .txt ul{height: 100%;padding-right: 40px;    padding-inline-start: 40px;}	
+		.c1 .txt li{margin-bottom: 20px;}	
+		.c1 .txt li:after{content: '';display: block;clear: both;}
+		.c1 .txt li a{display: block;white-space: nowrap;text-overflow: ellipsis;overflow:hidden;width: 280px;float: left;}
+		.c1 .txt li span{float: right;}
+		
+		.footer{background: #0d121b;text-align: center;padding: 30px 50px 100px 50px;}
+
+		@media(max-width: 1200px){
+		.c1-2 .txt{height: 221px;}
+		}
+		@media(max-width: 991px){
+		.c1-2 .txt{height: 162px; padding-top: 30px;}
+		.c1 .txt ul{padding-inline-start: 30px;}
+		.c1 .txt li span{display: none;	}
+
+		}
+	</style>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				var $pyt = window.pageYOffset;
+				console.log($pyt);
+				if($pyt>599){
+					$('#nav').fadeOut();
+				} else {
+					$('#nav').fadeIn();
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="header">
+		<nav id="nav" class="navbar navbar-expand-md bg-light navbar-dark fixed-top">
+			<!-- Brand -->
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><img src="images/common/header-logo.png" alt="dankook"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tmenu"><span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div class="collapse navbar-collapse" id="tmenu">
+				<!-- Links -->
+					<ul class="navbar-nav ml-auto">
+						<!-- Dropdown -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							대학소개
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#">총장소개</a>
+							<a class="dropdown-item" href="#">역대 총 &middot; 학장</a>
+							<a class="dropdown-item" href="#">Dynamic Dankook 2027</a>
+							<a class="dropdown-item" href="#">학교법인</a>
+							<a class="dropdown-item" href="#">역사 &middot; 상징</a>
+							<a class="dropdown-item" href="#">대학 기관 &middot; 규정</a>
+							<a class="dropdown-item" href="#">대학현황</a>
+							<a class="dropdown-item" href="#">캠퍼스 안내</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							입학안내
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#">대학입학</a>
+							<a class="dropdown-item" href="#">대학원입학</a>
+							<a class="dropdown-item" href="#">특수대학원(죽전)</a>
+							<a class="dropdown-item" href="#">특수대학원(천안)</a>
+							<a class="dropdown-item" href="#">외국인유학생 입학</a>
+							<a class="dropdown-item" href="#">한국어교육과정</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							교육
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#">대학</a>
+							<a class="dropdown-item" href="#">대학원</a>
+							<a class="dropdown-item" href="#">글로벌교육</a>
+							<a class="dropdown-item" href="#">어학교육</a>
+							<a class="dropdown-item" href="#">부설교육기관</a>
+							<a class="dropdown-item" href="#">교육지원</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							연구 &middot; 산학
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#">연구지원</a>
+							<a class="dropdown-item" href="#">연구기관</a>
+							<a class="dropdown-item" href="#">주요링크</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							대학생활
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#">학사안내</a>
+							<a class="dropdown-item" href="#">외국인 유학생 안내</a>
+							<a class="dropdown-item" href="#">특강 &middot; 프로그램 안내</a>
+							<a class="dropdown-item" href="#">학생지원</a>
+							<a class="dropdown-item" href="#">학생활동</a>
+							<a class="dropdown-item" href="#">시설이용</a>
+							<a class="dropdown-item" href="#">IT서비스</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+							커뮤니티
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#">DKU News</a>
+							<a class="dropdown-item" href="#">금주의 식단</a>
+							<a class="dropdown-item" href="#">교내홈페이지 찾기</a>
+							<a class="dropdown-item" href="#">홍보관</a>
+							<a class="dropdown-item" href="#">공지 및 행사</a>
+							<a class="dropdown-item" href="#">행정서비스</a>
+							<a class="dropdown-item" href="#">게시판</a>
+							</div>
+						</li>
+					</ul>
+			</div>
+			</div>
+		</nav>
+
+		<div class="visual mb50">
+			<div class="container-fluid p-0">
+			    <div id="demo1" class="carousel slide" data-ride="carousel">
+			
+				  <!-- Indicators -->
+				  <ul class="carousel-indicators">
+				    <li data-target="#demo1" data-slide-to="0" class="active"></li>
+				    <li data-target="#demo1" data-slide-to="1"></li>
+				    <li data-target="#demo1" data-slide-to="2"></li>
+				    <li data-target="#demo1" data-slide-to="3"></li>
+				  </ul>
+			
+				  <!-- The slideshow -->
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <img src="./images/main/main-visual-1.png" alt="dankook-hall">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="./images/main/main-visual-3.png" alt="dankook-hall">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="./images/main/main-visual-4.png" alt="dankook-hall">
+				    </div>
+				    <div class="carousel-item">
+				      <img src="./images/main/main-visual-2.png" alt="dankook-hall">
+				    </div>
+				  </div>
+			
+				  <!-- Left and right controls -->
+				  <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+				    <span class="carousel-control-prev-icon"></span>
+				  </a>
+				  <a class="carousel-control-next" href="#demo1" data-slide="next">
+				    <span class="carousel-control-next-icon"></span>
+				  </a>
+			
+				</div>
+			</div>
+		</div>
+
+	<div class="container mb50">
+	  <div class="row">
+	    <div class="c1 col-12 col-md-6 box">
+	    	<h2 class="mb10">DKU NEWS</h2>
+	    	<div class="txt">
+	    		<a href="#"><img src="images/main/main-cotent-1-1.png" alt=""></a>
+	    	</div>
+		</div>
+	    <div class="c1 c1-2 d-none d-md-block col-md-6 box">
+	   		<h2 class="mb10">DKU NOTICE</h2>
+			<div class="txt">
+				<ul>
+					<li><a href="#">[학사] 2018학년도 동계 계절수업 졸업예정자...</a><span>11.21</span></li>
+					<li><a href="#">11.21[채용/모집] [채용/모집] 경영대학 동문회 사무실 직원...</a><span>11.21</span></li>
+					<li><a href="#">[장학] [신청시작] 2019년도 1학기 국가장학금 1차...</a><span>11.21</span></li>
+					<li class="d-none d-lg-block"><a href="#">[일반] 2019 삼성에스원 아이디어 공모전...</a><span>11.20</span></li>
+					<li class="d-none d-xl-block"><a href="#">[채용/모집] 실험참가자 모집</a><span>11.20</span></li>
+				</ul>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<div class="container">	
+		<ul class="row">
+			<li class="col-6 d-sm-block col-sm-4 col-md-3">
+				<h3>DKU</h3>
+				<p><img src="images/main/main-content-2-1.png" alt=""></p>
+			</li>
+			<li class="col-6 d-sm-block col-sm-4 col-md-3">
+				<h3>DKU</h3>
+				<p><img src="images/main/main-content-2-2.png" alt=""></p>
+			</li>
+			<li class="d-none d-sm-block col-sm-4 col-md-3">
+				<h3>DKU</h3>
+				<p><img src="images/main/main-content-2-3.png" alt=""></p>
+			</li>
+			<li class="d-none d-md-block col-md-3">
+				<h3>DKU</h3>
+				<p><img src="images/main/main-content-2-4.png" alt=""></p>
+			</li>
+		</ul>
+	</div>
+	
+
+
+<div class="bg-dark text-light text-center pt-5 pb-5 d-none d-md-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<div>
+					<h3>text</h3>todays upload
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div>
+					<h3>text</h3>todays upload
+				</div>
+			</div>
+			<div class="col-md-4">
+				<a href="#myModal" class="btn btn-danger" data-toggle="modal">Sign up Now</a>
+			</div>
+			<div class="col-md-2">
+				<div>
+					<h3>text</h3>todays upload
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div>
+					<h3>text</h3>todays upload
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis accusantium praesentium facilis dolor tenetur quod nemo assumenda voluptate eum, reiciendis obcaecati harum pariatur nobis itaque earum veniam fugiat mollitia! Saepe!</footer>
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</body>
+</html>
