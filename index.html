@@ -6,12 +6,13 @@
 	<title>title</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/reset.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<style>
-		body{font-size: 14px;}
+		body{font-size: 14px;background: #f5f5f5;}
 		img{max-width: 100%;}
 		.mb50{margin-bottom: 50px;}
 		.mb10{margin-bottom: 10px;}
@@ -25,7 +26,7 @@
 		.visual{padding-top: 99px;}
 
 		.c1{}
-		.c1 h2{font-size: 30px;	color: #36496d;}
+		.c h2{font-size: 22px;	color: #36496d;}
 		.c1-2 .txt{background: #ebebeb;height: 264px;padding-top: 40px;	padding-bottom:40px;}
 		.c1 .txt ul{height: 100%;padding-right: 40px;    padding-inline-start: 40px;}	
 		.c1 .txt li{margin-bottom: 20px;}	
@@ -33,6 +34,15 @@
 		.c1 .txt li a{display: block;white-space: nowrap;text-overflow: ellipsis;overflow:hidden;width: 280px;float: left;}
 		.c1 .txt li span{float: right;}
 		
+		.c2 li .txt{text-align: center;background: #fff;padding: 1rem;}
+		.c2 li .txt p{margin-bottom: 0;}
+		
+		.c3 li a{display: block;width: 100%;height: 100%;line-height: 40px;text-align: center;background: #ebebeb;}
+		.c3 li .icon-1{background: #ebebeb url(images/main/main-content-3-1.png) center no-repeat; background-size: contain;}
+		.c3 li .icon-2{background: #ebebeb url(images/main/main-content-3-2.png) center no-repeat; background-size: contain;}
+		.c3 li .icon-3{background: #ebebeb url(images/main/main-content-3-3.png) center no-repeat; background-size: contain;}
+		.c3 li .icon-4{background: #ebebeb url(images/main/main-content-3-4.png) center no-repeat; background-size: contain;}
+
 		.footer{background: #0d121b;text-align: center;padding: 30px 50px 100px 50px;}
 
 		@media(max-width: 1200px){
@@ -42,7 +52,8 @@
 		.c1-2 .txt{height: 162px; padding-top: 30px;}
 		.c1 .txt ul{padding-inline-start: 30px;}
 		.c1 .txt li span{display: none;	}
-
+		.c2 .txt h2{font-size: 18px;}
+		.c2 .txt p{font-size: 10px;}
 		}
 	</style>
 	<script>
@@ -64,7 +75,9 @@
 		<nav id="nav" class="navbar navbar-expand-md bg-light navbar-dark fixed-top">
 			<!-- Brand -->
 			<div class="container">
-				<a class="navbar-brand" href="index.html"><img src="images/common/header-logo.png" alt="dankook"></a>
+				<h1>
+					<a class="navbar-brand" href="index.html"><img src="images/common/header-logo.png" alt="dankook"></a>
+				</h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tmenu"><span class="navbar-toggler-icon"></span>
 				</button>
 				
@@ -198,13 +211,13 @@
 
 	<div class="container mb50">
 	  <div class="row">
-	    <div class="c1 col-12 col-md-6 box">
+	    <div class="c c1 col-12 col-md-6 box">
 	    	<h2 class="mb10">DKU NEWS</h2>
 	    	<div class="txt">
 	    		<a href="#"><img src="images/main/main-cotent-1-1.png" alt=""></a>
 	    	</div>
 		</div>
-	    <div class="c1 c1-2 d-none d-md-block col-md-6 box">
+	    <div class="c c1 c1-2 d-none d-md-block col-md-6 box">
 	   		<h2 class="mb10">DKU NOTICE</h2>
 			<div class="txt">
 				<ul>
@@ -219,26 +232,69 @@
 	  </div>
 	</div>
 	<div class="container">	
-		<ul class="row">
-			<li class="col-6 d-sm-block col-sm-4 col-md-3">
-				<h3>DKU</h3>
-				<p><img src="images/main/main-content-2-1.png" alt=""></p>
-			</li>
-			<li class="col-6 d-sm-block col-sm-4 col-md-3">
-				<h3>DKU</h3>
-				<p><img src="images/main/main-content-2-2.png" alt=""></p>
-			</li>
-			<li class="d-none d-sm-block col-sm-4 col-md-3">
-				<h3>DKU</h3>
-				<p><img src="images/main/main-content-2-3.png" alt=""></p>
-			</li>
-			<li class="d-none d-md-block col-md-3">
-				<h3>DKU</h3>
-				<p><img src="images/main/main-content-2-4.png" alt=""></p>
-			</li>
-		</ul>
+		<div class="c c2">
+			<ul class="row">
+				<li class="col-6 d-sm-block col-sm-4 col-md-3">
+					<div class="txt">
+						<h2>DKU TODAY</h2>
+						<p>언론 속 단국인</p>
+					</div>
+					<p><a href="#"><img src="images/main/main-content-2-1.png" alt=""></a></p>
+				</li>
+				<li class="col-6 d-sm-block col-sm-4 col-md-3">
+					<div class="txt">
+						<h2>DKU VOC</h2>
+						<p>학교생활에 대한 정보제공</p>
+					</div>
+					<p><a href="#"><img src="images/main/main-content-2-2.png" alt=""></a></p>
+				</li>
+				<li class="d-none d-sm-block col-sm-4 col-md-3">
+					<div class="txt">
+						<h2>대학 발전기금</h2>
+						<p>학교발전기금 확인하기</p>
+					</div>
+					<p><a href="#"><img src="images/main/main-content-2-3.png" alt=""></a></p>
+				</li>
+				<li class="d-none d-md-block col-md-3">
+					<div class="txt">
+						<h2>학연가연</h2>
+						<p>장충식 이사의 에세이</p>
+					</div>
+					<p><a href="#"><img src="images/main/main-content-2-4.png" alt=""></a></p>
+				</li>
+			</ul>
+		</div>
 	</div>
 	
+	<div class="container">
+		<div class="c3">
+			<div class="row">
+				<div class="col-8">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/XFfemUWPnSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-4">
+					<ul class="row">
+						<li class="col-12 row">
+							<a href="#" class="col-4 icon-1"></a>
+							<a class="col-8">페이스북 바로가기</a>
+						</li>
+						<li  class="col-12 row">
+							<a href="#" class="col-4 icon-2"></a>
+							<a class="col-8"> 인스타그램 바로가기</a>
+						</li>
+						<li  class="col-12 row">
+							<a href="#" class="col-4 icon-3"></a>
+							<a class="col-8">유튜브 바로가기</a>
+						</li>
+						<li  class="col-12 row">
+							<a href="#" class="col-4 icon-4"></a>
+							<a class="col-8">블로그 바로가기</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 <div class="bg-dark text-light text-center pt-5 pb-5 d-none d-md-block">
