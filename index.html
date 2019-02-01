@@ -22,14 +22,16 @@
 		nav .navbar-brand img{width: 190px;}
 		nav .dropdown-toggle::after{border: none;}
 		nav .dropdown-menu{font-size: 0.8rem;}
-		
+		.navbar-dark .navbar-toggler-icon{background: url(images/common/menu-black.png) 0 0 no-repeat;-webkit-background-size: contain;
+		background-size: contain;}
+
 		.visual{padding-top: 99px;}
 
 		.c1{}
 		.c h2{font-size: 18px;	color: #36496d;}
 		.c ul{margin-bottom: 0;}
-		.container{margin-bottom: 3rem;}
 		.header .container{margin-bottom: 0;}
+		.container{margin-bottom: 3rem;}
 		.c1-2 .txt{background: #ebebeb;height: 264px;padding-top: 40px;	padding-bottom:40px;}
 		.c1 .txt ul{height: 100%;padding-right: 40px;    padding-inline-start: 40px;}	
 		.c1 .txt li{margin-bottom: 20px;}	
@@ -48,7 +50,8 @@
 		.c3 li .icon-3{background: url(images/main/main-content-3-3.png) center no-repeat; background-size: contain;}
 		.c3 li .icon-4{background: url(images/main/main-content-3-4.png) center no-repeat; background-size: contain;}
 
-		.c4 a{display: block;width: 100%;text-align: center;padding-top: 150px;background: url(images/main/main-content-4.png) 1% 0 no-repeat;transition: .6s;}
+		.c4 a{display: block;width: 100%;text-align: center;padding-top: 150px;transition: .6s;}
+		.c4 .c4-1 a{background: url(images/main/main-content-4.png) 1% 0 no-repeat;}
 		.c4 .c4-2 a{background: url(images/main/main-content-4.png) 21% 0 no-repeat;}
 		.c4 .c4-3 a{background: url(images/main/main-content-4.png) 40% 0 no-repeat;}
 		.c4 .c4-4 a{background: url(images/main/main-content-4.png) 60% 0 no-repeat;}
@@ -63,25 +66,35 @@
 		.footer{background: #0d121b;text-align: center;padding: 30px 50px 100px 50px;}
 
 		@media(max-width: 1200px){
-		.c1-2 .txt{height: 221px;}
-		.c4 .c4-1 a{background-position: -2% 0;}
-		.c4 .c4-2 a{background-position: 19% 0;}
-		.c4 .c4-6 a{background-position: 101% 0;}
-		.c4 .c4-1 a:hover{background-position: -2% 0;}
-		.c4 .c4-2 a:hover{background-position: 19% 0;}
-		.c4 .c4-6 a:hover{background-position: 101% 0;}
+			.c1-2 .txt{height: 221px;}
+			.c4 .c4-1 a{background-position: -2% 0;}
+			.c4 .c4-2 a{background-position: 19% 0;}
+			.c4 .c4-6 a{background-position: 101% 0;}
+			.c4 .c4-1 a:hover{background-position: -2% 0;}
+			.c4 .c4-2 a:hover{background-position: 19% 0;}
+			.c4 .c4-6 a:hover{background-position: 101% 0;}
 		}
 		@media(max-width: 991px){
-		.c1-2 .txt{height: 162px; padding-top: 30px;}
-		.c1 .txt ul{padding-inline-start: 30px;}
-		.c1 .txt li span{display: none;	}
-		.c2 .txt h2{font-size: 18px;}
-		.c2 .txt p{font-size: 10px;}
-		.c4 .c4-2 a:{background-position: 18% 0;}
-		.c4 .c4-2 a:hover{background-position: 18% 0;}
-		.c4 .c4-3 a:{background-position: 39% 0;}
-		.c4 .c4-3 a:hover{background-position: 39% 0;}
+			.c1-2 .txt{height: 162px; padding-top: 30px;}
+			.c1 .txt ul{padding-inline-start: 30px;}
+			.c1 .txt li span{display: none;	}
+			.c2 .txt h2{font-size: 18px;}
+			.c2 .txt p{font-size: 10px;}
+			.c3 li a{height: 60px;}
+
 		}
+		@media(max-width: 768px){
+			nav#nav{height: 70px;}
+			.visual{padding-top: 70px;}
+			.c4 .c4-1 a{background-position: 2% 0;}
+			.c4 .c4-1 a:hover{background-position: 2% 0;}
+    		.c4 .c4-2 a{background-position: 21% 0;}
+			.c4 .c4-2 a:hover{background-position: 21% 0;}
+			.c4 .c4-3 a{background-position: 40% 0;}
+			.c4 .c4-3 a:hover{background-position: 40% 0;}		
+
+		 /*xs*/	
+
 	</style>
 	<script>
 		$(function(){
@@ -235,6 +248,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
 	<div class="container mb50">
 	  <div class="row">
@@ -264,28 +278,28 @@
 				<li class="col-6 d-sm-block col-sm-4 col-md-3">
 					<div class="txt">
 						<h2>DKU TODAY</h2>
-						<p>언론 속 단국인</p>
+						<p class="d-none d-md-block">언론 속 단국인</p>
 					</div>
 					<p><a href="#"><img src="images/main/main-content-2-1.png" alt=""></a></p>
 				</li>
 				<li class="col-6 d-sm-block col-sm-4 col-md-3">
 					<div class="txt">
 						<h2>DKU VOC</h2>
-						<p>학교생활에 대한 정보제공</p>
+						<p class="d-none d-md-block">학교생활에 대한 정보제공</p>
 					</div>
 					<p><a href="#"><img src="images/main/main-content-2-2.png" alt=""></a></p>
 				</li>
 				<li class="d-none d-sm-block col-sm-4 col-md-3">
 					<div class="txt">
 						<h2>대학 발전기금</h2>
-						<p>학교발전기금 확인하기</p>
+						<p class="d-none d-md-block">학교발전기금 확인하기</p>
 					</div>
 					<p><a href="#"><img src="images/main/main-content-2-3.png" alt=""></a></p>
 				</li>
 				<li class="d-none d-md-block col-md-3">
 					<div class="txt">
 						<h2>학연가연</h2>
-						<p>장충식 이사의 에세이</p>
+						<p class="d-none d-md-block">장충식 이사의 에세이</p>
 					</div>
 					<p><a href="#"><img src="images/main/main-content-2-4.png" alt=""></a></p>
 				</li>
@@ -303,26 +317,26 @@
 					<ul>
 						<li class="row">
 							<div class="txt col-12 row">
-								<a href="#" class="col-6 icon-1"></a>
-								<a href="#" class="col-6">페이스북 바로가기</a>
+								<a href="#" class="col-12 col-lg-6 icon-1"></a>
+								<a href="#" class="d-none d-lg-block col-lg-6">페이스북 바로가기</a>
 							</div>
 						</li>
 						<li class="row">
 							<div class="txt col-12 row">
-								<a href="#" class="col-4 icon-2"></a>
-								<a href="#" class="col-8"> 인스타 바로가기</a>
+								<a href="#" class="col-12 col-lg-6 icon-2"></a>
+								<a href="#" class="d-none d-lg-block col-lg-6"> 인스타 바로가기</a>
 							</div>
 						</li>
 						<li class="row">
 							<div class="txt col-12 row">
-								<a href="#" class="col-6 icon-3"></a>
-								<a href="#" class="col-6">유튜브 바로가기</a>
+								<a href="#" class="col-12 col-lg-6 icon-3"></a>
+								<a href="#" class="d-none d-lg-block col-lg-6">유튜브 바로가기</a>
 							</div>
 						</li>
 						<li class="row">
 							<div class="txt col-12 row">
-								<a href="#" class="col-6 icon-4"></a>
-								<a href="#" class="col-6">블로그 바로가기</a>
+								<a href="#" class="col-12 col-lg-6 icon-4"></a>
+								<a href="#" class="d-none d-lg-block col-lg-6">블로그 바로가기</a>
 							</div>
 						</li>
 					</ul>
@@ -334,9 +348,9 @@
 	<div class="container">
 		<div class="c c4">
 			<div class="row">
-				<div class="c4-1 d-none d-md-block col-md-4 col-lg-3 col-xl-2"><a href="#">학술정보관</a></div>
-				<div class="c4-2 col-6 col-md-4 col-lg-3 col-xl-2"><a href="#">취업지원</a></div>
-				<div class="c4-3 col-6 col-md-4 col-lg-3 col-xl-2"><a href="#">학사센터</a></div>
+				<div class="c4-1 d-none d-sm-block col-sm-4 col-md-4 col-lg-3 col-xl-2"><a href="#">학술정보관</a></div>
+				<div class="c4-2 d-none d-sm-block col-sm-4 col-md-4 col-lg-3 col-xl-2"><a href="#">취업지원</a></div>
+				<div class="c4-3 d-none d-sm-block col-sm-4 col-md-4 col-lg-3 col-xl-2"><a href="#">학사센터</a></div>
 				<div class="c4-4 d-none d-xl-block col-xl-2"><a href="#">장애인식 개선영상</a></div>
 				<div class="c4-5 d-none d-xl-block col-xl-2"><a href="#">인권센터</a></div>
 				<div class="c4-6 d-none d-lg-block col-lg-3 col-xl-2"><a href="#">발전기금</a></div>
